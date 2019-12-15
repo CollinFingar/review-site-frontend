@@ -30,12 +30,14 @@ module.exports = {
   resolve: { extensions: ["*", ".js", ".jsx"] },
   output: {
     path: path.resolve(__dirname, "dist/"),
-    filename: "index.js"
+    filename: "index.js",
+    publicPath: '/'
   },
   devServer: {
     contentBase: path.join(__dirname, "public/"),
     port: 3000,
-    hotOnly: true
+    hotOnly: true,
+    historyApiFallback: true,
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
