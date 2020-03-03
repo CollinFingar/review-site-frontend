@@ -7,7 +7,7 @@ const Bar = styled.nav`
   background-color: ${props => props.theme.light};
   position: fixed;
   top: 0;
-  width: 100%;
+  width: calc(100% - 40px);
   z-index: 100;
   display: flex;
   justify-content: space-between;
@@ -31,7 +31,7 @@ const Bar = styled.nav`
     text-align: center;
     display: inline-block;
     height: 100%;
-    color: ${props => props.theme.bgDark};
+    color: ${props => props.theme.bodyTextColor};
     text-decoration: none;
     vertical-align: middle;
     line-height: 40px;
@@ -40,6 +40,14 @@ const Bar = styled.nav`
   }
   a:hover {
     color: ${props => props.theme.highlight};
+  }
+  div {
+    position: absolute;
+    right: 0px;
+    a {
+      margin: 0px 5px;
+    }
+    margin-right: 5px;
   }
 `;
 
@@ -51,24 +59,17 @@ const NavBar = (props) => {
         AO
       </NavLink>
     
-      <ul>
-        <li>
-          <NavLink activeClassName="active" to="/reviews">
-            Reviews
-          </NavLink>
-        </li>
-        <li>
-          <NavLink activeClassName="active" to="/thoughts">
-            Thoughts
-          </NavLink>
-        </li>
-        <li>
-          <NavLink activeClassName="active" to="/about">
-            About
-          </NavLink>
-        </li>
-      </ul>
-    
+      <div>
+        <NavLink activeClassName="active" to="/reviews">
+          Reviews
+        </NavLink>
+        <NavLink activeClassName="active" to="/thoughts">
+          Thoughts
+        </NavLink>
+        <NavLink activeClassName="active" to="/about">
+          About
+        </NavLink>
+      </div>
       
     </Bar>
   );

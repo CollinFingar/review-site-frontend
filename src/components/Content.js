@@ -3,11 +3,12 @@ import styled, { withTheme } from 'styled-components';
 
 const ContentWrapper = styled.div`
   max-width: ${props => props.theme.width || 1024}px;
-  background-color: ${props => props.theme.bgLight};
+  // background-color: ${props => props.theme.bgLight};
   margin: auto;
   min-height: 95vh;
   // border-radius: 4px;
   padding: 10px;
+  color: ${props => props.theme.bodyTextColor};
 `;
 
 const Content = (props) => {

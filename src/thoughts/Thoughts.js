@@ -8,7 +8,7 @@ class Thoughts extends React.Component {
       <div>
         <SectionTitle text={'THOUGHTS'} />
         <Content>
-          <span>review site coming soon...</span>
+          <span>thoughts coming soon...</span>
         </Content>
       </div>
     )

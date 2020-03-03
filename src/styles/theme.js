@@ -1,8 +1,9 @@
 const theme = {
-  bgDark: "#283149",
-  bgLight: "#404b69",
-  highlight: "#00818a",
-  light: "#dbedf3"
+  bgDark: "#222",
+  bgLight: "#222",
+  highlight: "#4AC",
+  light: "#222",
+  bodyTextColor: "#EEE"
 };
 
 export default theme;
